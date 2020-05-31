@@ -1,9 +1,9 @@
 class CSStudent:
-    static_var_stream = "CSE"
+    static_var_stream = "CSE"   # Class or Static Variable 
 
     def __init__(self, name, roll):
-        self.name = name
-        self.roll = roll
+        self.name = name    # Instance Variable -
+        self.roll = roll    # no extra declaration
 
 ## Driver code in same Python Module
 
