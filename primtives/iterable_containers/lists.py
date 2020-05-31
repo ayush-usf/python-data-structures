@@ -40,5 +40,16 @@ while True: # Nothing like hasNext()
         item = next(iterable_obj)
         print(item, "| ", end = '') # end = '' means no new line
     except StopIteration:
+        print()
         break
 
+# Enumerate() - get index from iterable
+l1 = ["eat","sleep","repeat"] 
+
+# index starts from 0
+for idx,element in enumerate(l1): 
+    print(idx,element)
+
+# index starts from 100
+for idx,element in enumerate(l1,100): 
+    print(idx,element)
