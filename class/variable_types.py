@@ -6,11 +6,11 @@ var = 10
 from collections import Counter # mock import
 
 class CSStudent:
-    static_var_stream = "CSE"   # Class or Static Variable 
+    static_var_stream : str = "CSE"   # Class or Static Variable 
 
     def __init__(self, name, roll):
-        self.name = name    # Instance Variable -
-        self.roll = roll    # no extra declaration
+        self.name : str = name    # Instance Variable -
+        self.roll  : int = roll    # no extra declaration
 
 ## Driver code in same Python Module
 
