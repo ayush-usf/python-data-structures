@@ -1,3 +1,10 @@
+print("===================================================")
+
+# Variables declaration & print before import statemenet
+var = 10
+
+from collections import Counter # mock import
+
 class CSStudent:
     static_var_stream = "CSE"   # Class or Static Variable 
 
