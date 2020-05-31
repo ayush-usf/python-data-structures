@@ -62,3 +62,6 @@ print('deq: (after remove) ', deq)
 
 # Will get error as 10 doesn't exist in deque
 # de.remove(10)
+
+deq.clear()
+print('deq: (after clear) ', deq)
