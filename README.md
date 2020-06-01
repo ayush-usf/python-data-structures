@@ -32,9 +32,9 @@ val =  first_val if ternary_condition else second_val
  ### If result required from switch statement
 ```
  result = {
-            "case1": lambda x: operation1 (can be be independent of x),
-            "case2": lambda x: operation2 ,
-            "case3": lambda x: operation3 ,
-            "case4": lambda x: operation4
+            "case1": lambda x: op1 (can be be independent of x, but must return some value),
+            "case2": lambda x: x * 2 ,
+            "case3": lambda x: x + 2 ,
+            "case4": lambda x: x - 1
         }[case_name](argument_x_for_lambda_func)
  ```
