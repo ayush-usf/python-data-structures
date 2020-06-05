@@ -1,9 +1,10 @@
-import threading
-
-# Python 2 
+# Python 2
 # import thread  # depricated
 
-# Using 2 threading in Python 3
+# Python 3
+import threading
+
+# Using Python 2 threading in Python 3
 # import _thread
 
 import time
