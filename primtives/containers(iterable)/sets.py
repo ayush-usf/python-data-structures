@@ -1,3 +1,12 @@
+a = set('aardvark')         # {'d', 'v', 'a', 'r', 'k'} 
+b = {'aardvark'}            # {'aardvark'}
+# To create an empty set you have to use set(), not {}; 
+# the latter creates an empty dictionary
+
+# descending because key index hashed
+currencies3 = {1, 40} or set([1, 40])     # currencies = {40, 1}
+currencies3 = {1, 2} or set([1, 2])       # currencies = {1, 2}
+
 print("===================================================")
 
 empty_set:set = set()
