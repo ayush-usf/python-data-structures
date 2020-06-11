@@ -21,6 +21,19 @@ name, _, profession = person
 
 print(name, profession)
 
+print("====================== Unpacking ========================")
+
+*head1, tail1 = [1, 2, 3, 4, 5]
+print('head1, tail1: ', head1, tail1)
+print('*head1, tail1: ', *head1, tail1)
+
+head2, *tail2 = [1, 2, 3, 4, 5]
+print('head2, tail2: ', head2, tail2)
+print('head2, *tail2: ', head2, *tail2)
+
+head, *middle, tail = [1, 2, 3, 4, 5]
+print('head, *middle, tail: ', head, middle, tail)
+
 print("=========== Destructuring in a list of tuples =================")
 friends = [("Ayush", 23), ("Adarsh", 25), ("Ameya", 21)]
 
