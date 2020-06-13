@@ -66,6 +66,8 @@ print('deq: (after remove) ', deq)
 # Will get error as 10 doesn't exist in deque
 # de.remove(10)
 
+print("================= Deque (Convert to list) =======================")
+deq_list = list(deq)
 
 print("================= Deque (Rotate) =======================")
 
@@ -85,3 +87,4 @@ print('deq: (after Couterclockwise rotate) ', deq)
 
 deq.clear()
 print('deq: (after clear) ', deq)
+
