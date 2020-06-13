@@ -1,7 +1,10 @@
-# Deque is preferred over list in the cases where 
-# we need quicker append and pop operations from both 
-# the ends of container, as deque provides
-# an O(1) time complexity for append and pop operations
+# Deque is preferred over list in the cases where we need quicker 
+# append and pop operations from both the ends of container.
+
+# Deques have O(1) speed for appendleft() and popleft() while lists have O(n) performance
+# for insert(0, value) and pop(0). List append performance is hit and miss because it uses 
+# realloc() under the hood. In contrast, deque append performance is consistent because it
+# never reallocs and never moves data.
 
 # Methods/Functions
 # append(), appendleft()
