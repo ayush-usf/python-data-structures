@@ -30,3 +30,8 @@ print('counter_obj.most_common(1): ', counter_obj.most_common(1))
 
 print(Counter({'A':3, 'B':5, 'C':2}))
 print(Counter(A=3, B=5, C=2))
+
+print("=============== Iterate in Counter =================")
+# for key, val in .. # Not Allowed
+for key in counter:
+  print(key, counter[key])

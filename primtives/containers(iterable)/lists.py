@@ -53,3 +53,10 @@ for idx,element in enumerate(l1):
 # index starts from 100
 for idx,element in enumerate(l1,100): 
     print(idx,element)
+
+print("=============== sorting =================")
+# Timsort can require a temp array containing as many as N//2 pointers
+# Worst case performance  O(nlogn)
+# Best case performance   O(n)
+# Average case performance    O(nlogn)
+# Worst case space complexity O(n)

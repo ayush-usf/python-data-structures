@@ -69,6 +69,9 @@ print('deq: (after remove) ', deq)
 print("================= Deque (Convert to list) =======================")
 deq_list = list(deq)
 
+print("================= Deque (Length) =======================")
+print("length of deque : ",len(d))
+
 print("================= Deque (Rotate) =======================")
 
 import copy
