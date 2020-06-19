@@ -20,3 +20,7 @@ print('dict2: ', dict2)
 dict1.update(dict3)
 print('dict1.update(dict2)')
 print('dict1: ', dict1)
+
+print("================= Print Dict (beautify) =================")
+import json
+print('json.dumps(dict1, indent=4): ', json.dumps(dict1, indent=4))
