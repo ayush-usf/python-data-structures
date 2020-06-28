@@ -1,26 +1,23 @@
-# python-data-structures
+<details>
+    <summary>Virtual Environment (Conda) Setup</summary>
+    
+    # Creating the virtual environment with conda
+    conda create --prefix=venv python
 
-## Creating the virtual environment with conda
-```
-conda create --prefix=venv python
-```
+    # Activating environment
+    conda activate ./venv 
+    source activate /Users/..../venv
 
-### Activating environment
-```
-conda activate ./venv 
-source activate /Users/..../venv
-```
+    # Deactivating environment
+    conda deactivate
+</details>
 
-### Deactivating environment
-```
-conda deactivate
-```
-
-### Ternary operator
+---
+#### Ternary operator
 ```
 val =  first_val if ternary_condition else second_val
 ```
-### Switch statement with lambdas
+#### Switch statement with lambdas
 ```
         {
             "case1": lambda x: operation1 (can be be independent of x),
@@ -37,4 +34,4 @@ val =  first_val if ternary_condition else second_val
             "case3": lambda x: x + 2 ,
             "case4": lambda x: x - 1
         }[case_name](argument_x_for_lambda_func)
- ```
+```
