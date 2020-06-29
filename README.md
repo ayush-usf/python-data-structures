@@ -42,7 +42,7 @@ x = {'a' : 1, 'b' : 2}
 'a' in x
 ```
 ---
-### for loop wuth index
+### for loop with index
 ```
 for idx, char in enumerate("text", start=0):
     print("Char {}: {}".format(idx, char))
