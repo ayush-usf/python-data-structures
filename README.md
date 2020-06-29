@@ -41,3 +41,14 @@ val =  first_val if ternary_condition else second_val
 x = {'a' : 1, 'b' : 2}
 'a' in x
 ```
+---
+### for loop wuth index
+```
+for idx, char in enumerate("text", start=0):
+    print("Char {}: {}".format(idx, char))
+```
+### Iterate over string in backward
+```
+for elem in sampleStr[ : :-1]:
+    print(elem)
+```
