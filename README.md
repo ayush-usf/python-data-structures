@@ -52,3 +52,8 @@ for idx, char in enumerate("text", start=0):
 for elem in sampleStr[ : :-1]:
     print(elem)
 ```
+### Iterate over a string by skipping characters
+```
+for elem in sampleStr[ : : 2] : 
+    print(elem)
+```
