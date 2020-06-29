@@ -35,3 +35,9 @@ val =  first_val if ternary_condition else second_val
             "case4": lambda x: x - 1
         }[case_name](argument_x_for_lambda_func)
 ```
+
+### Dict - contains key
+```
+x = {'a' : 1, 'b' : 2}
+'a' in x
+```
