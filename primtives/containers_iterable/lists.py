@@ -113,6 +113,19 @@ list1 = [(1, 2), (3, 3), (1, 1)]
 list1.sort(key = sortSecond)
 print('list1.sort(): ', list1)
 
-print("============= Slicing with maxsplit ===============")
-str =  "a1 9 2 3 1"
-key1, str2 = str.split(" ", 1)
+
+
+print("========== Custom Sorting with specific Sorting Order ===============")
+
+students = [
+    ('Ayush','Computer Science','24'),
+    ('Akaash','Archeology','25'),
+    ('Raman','Biology','23'),
+    ('Kamal','Zoology','21'),
+]
+
+def sort_student(student):
+    name, subject, age = student
+    return (subject, age, name) if int(age) > 23 else (name, subject, age)
+
+print('sorted(students, key = sort_student): \n\t\t', sorted(students, key = sort_student))
