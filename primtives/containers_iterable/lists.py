@@ -112,3 +112,7 @@ def sortSecond(val):
 list1 = [(1, 2), (3, 3), (1, 1)]
 list1.sort(key = sortSecond)
 print('list1.sort(): ', list1)
+
+print("============= Slicing with maxsplit ===============")
+str =  "a1 9 2 3 1"
+key1, str2 = str.split(" ", 1)
