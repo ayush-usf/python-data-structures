@@ -1,3 +1,11 @@
+# ------------------ Extra Imports ------------------
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir) 
+from visualization import Visualizer
+# ------------------------------------------------------
+
 # Depth-first search is an algorithm for traversing or searching tree or graph data structures
 
 # Graphs may contain cycles. So, a node may be visited twice. 
@@ -21,14 +29,6 @@
 
 from collections import defaultdict   # if key not found, defaultdict[key] = []
 
-# ------------------ Extra Imports ------------------
-import os,sys,inspect
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0,parentdir) 
-from visualization import Visualizer
-# ------------------------------------------------------
-
 class Graph:
 
     def __init__(self):
@@ -39,7 +39,7 @@ class Graph:
         self.graph[u].append(v)
         self.v.add_edge(u,v)
 
-    def print(self):
+    def visualize(self):
         self.v.visualize()
 
     # A function used by DFS 
@@ -53,6 +53,7 @@ class Graph:
 
 
 g = Graph()
+
 g.addEdge(0,1)
 g.addEdge(0,4)
 g.addEdge(0,2)
@@ -62,7 +63,9 @@ g.addEdge(3,4)
 g.addEdge(2,5)
 g.addEdge(2,6)
 g.addEdge(5,6)
-g.print()
+g.visualize()
 
-# print("Following is the graph traversal from node {}".format(2))
-# g.DFS(2);
+starting_node = 2
+
+print("======== Graph traversal from node {} ========".format(starting_node))
+g.DFS(starting_node)
