@@ -10,7 +10,9 @@
 # Space Complexity: O(V)
 
 # Approach:
-# 1. Create a recursive function that takes the index of node and a visited array.
+# 1. Create a recursive function that takes the 
+#           - index of node
+#           - visited array
 # 2. mark the node 
 # 3. move to the adjacent unmarked node and move to the adjacent unmarked node
 # 4. backtrack and check for other unmarked nodes
