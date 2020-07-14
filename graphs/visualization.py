@@ -1,6 +1,4 @@
-# importing networkx  
 import networkx as nx 
-# importing matplotlib.pyplot 
 import matplotlib.pyplot as plt 
   
 class Visualizer:
@@ -19,7 +17,7 @@ class Visualizer:
         plt.savefig("graph_vizualization.png") 
         plt.show()
 
-v = Visualizer()
+# v = Visualizer()
 
 # Add One edge at a time
 # v.add_edge(1, 2)
@@ -29,6 +27,9 @@ v = Visualizer()
 # v.add_edge(1, 5)
 
 # Add all edges at a time
-v.add_edge_all([(1, 2), (2, 3), (3, 4), (1, 4), (1, 5)])
+# v.add_edge_all([(1, 2), (2, 3), (3, 4), (1, 4), (1, 5)])
 
-v.visualize()
+# v.visualize()
+
+# Weighted Graphs
+# https://networkx.github.io/documentation/stable/auto_examples/drawing/plot_weighted_graph.html#sphx-glr-auto-examples-drawing-plot-weighted-graph-py

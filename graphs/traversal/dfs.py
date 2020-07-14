@@ -19,17 +19,28 @@
 
 # N = V = 4 | E = 6
 
+from collections import defaultdict   # if key not found, defaultdict[key] = []
 
-
-from collections import defaultdict # if key not found, map[key] = 0, no error
+# ------------------ Extra Imports ------------------
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir) 
+from visualization import Visualizer
+# ------------------------------------------------------
 
 class Graph:
 
     def __init__(self):
         self.graph = defaultdict(list)  # default_factory() of type list
-    
+        self.v = Visualizer()
+
     def addEdge(self, u, v):
-        print("Add edge here")
+        self.graph[u].append(v)
+        self.v.add_edge(u,v)
+
+    def print(self):
+        self.v.visualize()
 
     # A function used by DFS 
     def DFSUtil(self, v, visited):
@@ -40,16 +51,18 @@ class Graph:
     def DFS(self, v):
         print("DFS")
 
- g = Graph()
-    # g.addEdge(0,1)
-    # g.addEdge(0,4)
-    # g.addEdge(0,2)
-    # g.addEdge(1,3)
-    # g.addEdge(1,4)
-    # g.addEdge(3,4)
-    # g.addEdge(2,5)
-    # g.addEdge(2,6)
-    # g.addEdge(5,6)
 
-    print("Following is the graph traversal from node {}".format(2))
-    g.DFS(2);
+g = Graph()
+g.addEdge(0,1)
+g.addEdge(0,4)
+g.addEdge(0,2)
+g.addEdge(1,3)
+g.addEdge(1,4)
+g.addEdge(3,4)
+g.addEdge(2,5)
+g.addEdge(2,6)
+g.addEdge(5,6)
+g.print()
+
+# print("Following is the graph traversal from node {}".format(2))
+# g.DFS(2);

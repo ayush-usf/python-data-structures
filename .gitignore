@@ -135,3 +135,6 @@ dmypy.json
 /.DS_Store
 */.DS_Store
 graph_vizualization.png
+*graph_vizualization.png
+*/graph_vizualization.png
+/*graph_vizualization.png
