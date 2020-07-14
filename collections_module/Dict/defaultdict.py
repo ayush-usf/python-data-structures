@@ -22,7 +22,6 @@ def undef_val():
 d = defaultdict(undef_val) 
 d2 = defaultdict(lambda: "Not Present") 
 
-
 d["a"] = 1
 d["b"] = 2
 print('d: ', json.dumps(d, indent=4))
@@ -46,16 +45,21 @@ print("============= default_factory() of type list =============")
 
 d = defaultdict(list)  # passing type list
 
+print('d[1]: default_factory(list)', d[1])  #    []
+
 for i in range(2): 
     d[i].append(i+10) 
       
 print(d)
-print('d: ', json.dumps(d, indent=4))
+print('d: default_factory(list)', json.dumps(d, indent=4))
 
 print("============= default_factory() of type int =============")
 
-d = defaultdict(int) 
-   
+d = defaultdict(int) # with default_factory() of int type
+                     # default value is zeror
+
+print('d[1]: default_factory(int)', d[1])   #  0
+
 L = [1, 2, 3, 4, 2, 4, 1, 2]
 for i in L: 
     d[i] += 1
