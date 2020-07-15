@@ -36,8 +36,9 @@ class Graph:
         self.v = Visualizer()
         self.result = ''
 
-    def addEdge(self, u, v):
+    def add_edge(self, u, v):
         self.graph[u].append(v)
+        self.graph[v].append(u)     # Undirected graph is bidrectional
         self.v.add_edge(u,v)
     
     def visualize(self):
@@ -79,12 +80,12 @@ class Graph:
 
 g = Graph()
 
-g.addEdge(0, 1) 
-g.addEdge(0, 2) 
-g.addEdge(1, 2) 
-g.addEdge(2, 0) 
-g.addEdge(2, 3) 
-g.addEdge(3, 3) 
+g.add_edge(0, 1) 
+g.add_edge(0, 2) 
+g.add_edge(1, 2) 
+g.add_edge(2, 0) 
+g.add_edge(2, 3) 
+g.add_edge(3, 3) 
 
 starting_node = 2
 
