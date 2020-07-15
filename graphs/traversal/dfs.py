@@ -34,38 +34,61 @@ class Graph:
     def __init__(self):
         self.graph = defaultdict(list)  # default_factory() of type list
         self.v = Visualizer()
+        self.result = ''
 
     def addEdge(self, u, v):
         self.graph[u].append(v)
         self.v.add_edge(u,v)
-
+    
     def visualize(self):
-        self.v.visualize()
-
-    # A function used by DFS 
-    def DFSUtil(self, v, visited):
-        print("DFSUtil")
+        self.v.visualize()   
+    
+    def print(self, starting_node):
+        print("DFS from vertex {} = {}".format(starting_node, self.result))
 
     # The function to do DFS traversal. It uses 
     # recursive DFSUtil() 
     def DFS(self, v):
-        print("DFS")
+        
+        '''
+        6 starting vertices from 0 to 5
+        => bool array with 6 elements
+        '''
+        visited_arr = [False] * (max(self.graph) + 1)
+        
+        '''
+        recursive function that takes 
+        the index of node and 
+        visited array
+        '''
+        self.DFSUtil(v , visited_arr)
+
+    # Recursive function for DFS with Backtracking
+    def DFSUtil(self, v, visited):
+        
+        visited[v] = True
+        # Adding V to result
+        self.result += str(v) + " "
+
+        # Traversing vertices adjacent to this vertex 
+        for i in self.graph[v]:
+            if visited[i] == False:
+                self.DFSUtil(i, visited)
+    
 
 
 g = Graph()
 
-g.addEdge(0,1)
-g.addEdge(0,4)
-g.addEdge(0,2)
-g.addEdge(1,3)
-g.addEdge(1,4)
-g.addEdge(3,4)
-g.addEdge(2,5)
-g.addEdge(2,6)
-g.addEdge(5,6)
-g.visualize()
+g.addEdge(0, 1) 
+g.addEdge(0, 2) 
+g.addEdge(1, 2) 
+g.addEdge(2, 0) 
+g.addEdge(2, 3) 
+g.addEdge(3, 3) 
 
 starting_node = 2
 
 print("======== Graph traversal from node {} ========".format(starting_node))
 g.DFS(starting_node)
+g.print(starting_node)
+g.visualize()
